@@ -1,0 +1,84 @@
+
+window.onload=function date(){
+	var today=document.getElementById("topdate");
+	var date=new Date();
+	today.innerHTML="date.getFullYear()+'年'+date.getMonth()+'月'+date.getDay()+'日'";
+}
+
+
+//图片轮番;
+window.onload=function imagechange(){
+	var list=document.getElementById('list');
+	function move(num){
+        var location=parseInt(list.style.left)+num;
+        list.style.left=location+"px";
+        if(location<-1600){
+        	list.style.left="-400px";
+        }
+        if(location>-400){
+        	list.style.left="-1600px";
+        }
+	}
+    var buttonl=document.getElementById('button-l');
+	var buttonr=document.getElementById('button-r');
+	
+
+
+    
+   //小点轮番;
+    var buttons=document.getElementById("button").getElementsByTagName('span');
+    var index=1;
+    function clearclassname(){
+        for(var i=0;i<buttons.length;i++){
+            if(buttons[i].className=="on"){
+                buttons[i].className="";
+            }
+        }
+        buttons[index-1].className="on";
+    }
+    buttonl.onclick=function(){
+        index-=1;
+        if(index<1){
+            index=4;
+        }
+        clearclassname();
+        move(400);
+    }
+    buttonr.onclick=function(){
+        index+=1;
+        if(index>4){
+            index=1;
+        }
+        clearclassname();
+        move(-400);
+    }
+
+
+    var timer;
+    function play(){
+        timer=setInterval(function(){
+            buttonr.onclick();
+        },1000);
+    }
+    play();
+    
+    function stop(){
+        clearInterval(timer);
+    }
+    list.onmouseover=stop;
+    list.onmouseout=play;
+    
+
+    //小点定位;
+    for(var i=0;i<buttons.length;i++){
+        (function(i){
+            buttons[i].onclick=function(){
+                console.log(i);
+                var clickindex=parseInt(this.getAttribute('index'));
+                var offset=600*(index-clickindex);
+                move(offset);
+                clearclassname();
+            }
+        })(i)
+    }
+}
