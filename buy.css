@@ -1,0 +1,107 @@
+.body{
+	width:1000px;
+	margin:auto;
+	padding:auto;
+	background-color:pink;
+}
+
+.top-l h1{
+	color:red;
+	font-style:italic;
+}
+.top{
+	width: 1000px;
+	height: 200px;
+    background-image: url(images/buytop.jpg);
+    background-size: cover;
+}
+.home{
+	padding-top:20px;
+	padding-left:10px;
+	width: 100px;
+	height: 20px;
+}
+.home a{
+	text-decoration: none;
+	color:red;
+	font-family:bold;
+}
+.home a:hover{
+	color: #e67222;
+}
+.top-l{
+	width:400px;
+	height: 100px;
+	margin:20px 30px;
+	float: left;
+}
+.top-r{
+	width:500px;
+	height: 100px;
+	float: right;
+}
+.top-r input{
+	height:25px;
+	margin-top:80px;
+	float: right;
+	margin-right: 20px;
+	border:1px solid red;
+}
+.sousuo,.jiesuan{
+	width: 50px;
+	height: 25px;
+	background-color: red;
+	color: black;
+	border:1px solid red;
+}
+
+
+
+
+
+.form{
+	margin:auto;
+	padding: auto;
+	width: 950px;
+}
+
+.tabletop{
+	width: 1000px;
+	height:20px;
+	margin-left:8px;
+}
+.tabletop td{
+	width: 200px;
+	height:20px;
+}
+.table{
+	width: 950px;
+	height: 100px;
+	margin: 5px auto;
+	background-color: white;
+	border:2px solid red;
+}
+.table td{
+	width: 200px;
+	height: 100px;
+}
+.table img{
+	border:1px solid #ccc;
+}
+
+
+
+
+.footer{
+	width: 100%;
+	height: 150px;
+}
+.footer1{
+	width: 650px;
+	margin:auto;
+	padding: auto;
+}
+.footer1 p{
+	font-style: italic;
+	padding-top: 50px;
+}
