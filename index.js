@@ -1,13 +1,10 @@
-
-window.onload=function date(){
-	var today=document.getElementById("topdate");
-	var date=new Date();
-	today.innerHTML="date.getFullYear()+'年'+date.getMonth()+'月'+date.getDay()+'日'";
+//图片轮番;
+window.onload= function(){
+    imagechange();
+    section();
 }
 
-
-//图片轮番;
-window.onload=function imagechange(){
+function imagechange(){
 	var list=document.getElementById('list');
 	function move(num){
         var location=parseInt(list.style.left)+num;
@@ -21,11 +18,9 @@ window.onload=function imagechange(){
 	}
     var buttonl=document.getElementById('button-l');
 	var buttonr=document.getElementById('button-r');
-	
-
 
     
-   //小点轮番;
+   //左右按钮 小点轮番;
     var buttons=document.getElementById("button").getElementsByTagName('span');
     var index=1;
     function clearclassname(){
@@ -81,4 +76,19 @@ window.onload=function imagechange(){
             }
         })(i)
     }
+}
+
+function section(){
+    var buttons=document.querySelectorAll("#sections li");
+    var content=document.querySelectorAll('.sectiondiv');
+    buttons.forEach(function(val, index){
+        buttons[index].onclick=function(){
+            for(var j=0;j<buttons.length;j++){
+                buttons[j].className="";
+                content[j].classList.remove("nohiddendiv");
+            }
+            buttons[index].className = "nowon";
+            content[index].classList.add("nohiddendiv");
+        }
+    })
 }
