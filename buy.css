@@ -73,6 +73,7 @@
 .tabletop td{
 	width: 200px;
 	height:20px;
+	font-size: 20px;
 }
 .table{
 	width: 950px;
@@ -87,7 +88,83 @@
 }
 .table img{
 	border:1px solid #ccc;
+	margin-left: 20px;
+	margin-top:10px;
 }
+.content{
+	font-style: italic;
+	color: red;
+	text-align:left;
+}
+.number div{
+	font-family: bold;
+	float:left;
+	margin:auto 10px;
+}
+ 
+.number input{
+	width:30px;
+	float: left;
+}
+.jian, .jia{
+	margin:0px;
+	width: 15px;
+	height: 1px;
+	font-size:20px;
+	padding-bottom:20px;
+	text-align: center;
+	float: left;
+	border: 1px solid #ccc;
+}
+.totalprice{
+	height:30px;
+	width: 50px;
+	float: left;
+}
+#totalprice{
+	height: 30px;
+	width: 50px;
+	float: left;
+}
+.jiesuan{
+	width: 100px;
+	height:40px;
+	color: white;
+}
+.price{
+	margin-left: 35px;
+	margin-top: 30px;
+    width:50px;
+	height: 50px;  
+	float: left;
+}  
+.value{
+	margin-top: 30px;
+	width: 50px;
+	height: 50px;
+	float: left;
+	color: red;
+}
+.removething{
+	background-color:pink;
+	color:blue;
+	margin-left:80px;
+}
+.totalnum,#totalnum1{
+	width:50px;
+	height: 30px;
+	float: left;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 

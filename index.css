@@ -15,6 +15,7 @@
 	color: black;
 	list-style: none;
 	font-style: italic;
+	text-align: center;
 }
  
 .newmember a{
@@ -121,7 +122,7 @@
     top:180px;
     font-size: 39px;
     color:red;
-    display: none;
+    display:none;
     text-decoration: none;
     text-align: center;
     cursor:pointer;
@@ -154,10 +155,11 @@
 	height:180px;
 	margin:10px 10px;
 	float: right;
+	overflow: hidden;
 }
 .rightpic img{
 	width: 180px;
-	height: 160px;
+	height: 150px;
 }
 .middle{
 	width:1000px;
@@ -204,11 +206,14 @@
 	background-color: white;
 	border:1px solid #f2991a;
 }
-.middle-l2 li{
+.middle-l2 li,.middle-m2 li,.middle-r2 li{
 	width: 320px;
 	height: 30px;
 	margin:10px 15px;
 	list-style: none
+}
+.middle-l2 li:hover,.middle-m2 li:hover,.middle-r2 li:hover{
+	color:red;
 }
 .lidiv{
 	width: 320px;
@@ -233,7 +238,76 @@
 
 
 
+
+.part3-ttop{
+	width:1000px;
+	height:55px;
+	margin:auto;
+	padding:auto;
+	background-color: white;
+}
+.part3-ttop1{
+	width:30px;
+	height:30px;
+	float: left;
+	margin-top: 10px;
+	margin-left:5px;
+}
+.part3-ttop2{
+	width:300px;
+	height:30px;
+    font-size:25px;
+    margin-top:10px;
+    margin-left:15px;
+    font-family:bold;
+    font-style: italic;
+    float: left;
+}
+.part3{
+	width: 1000px;
+	height: 500px;
+	border:1px solid #f2991a;
+	margin:auto;
+	padding:auto;
+	margin-top:5px;
+	text-decoration:none;
+}
+.part3_top{
+	width:1000px;
+	height:50px;
+	background-color: #f2991a;
+}
+.part3_top li{
+	padding-top: 10px;
+	font-size:25px;
+	font-family:bold;
+    width:130px;
+    height:38px;
+    list-style: none;
+    float: left; 
+    text-align:center;
+    border:2px solid white;
+}
+.nowon{
+	background-color:#eee;
+}
+.part3_footer{
+	width: 1000px;
+	height: 450px;
+}
+.sectiondiv{
+	padding-top: 5px;
+    visibility:hidden;
+}
+.nohiddendiv{
+	visibility:visible;
+}
+
+
+
+
 .footer{
+	margin-top: 10px;
 	width: 100%;
 	height: 150px;
 	background-color:#ccc;

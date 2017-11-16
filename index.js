@@ -1,3 +1,8 @@
+
+
+
+
+
 //图片轮番;
 window.onload= function(){
     imagechange();
@@ -78,17 +83,41 @@ function imagechange(){
     }
 }
 
+
+
+
+
+
+//头部日期
+var date=new Date();
+var topdate=document.getElementById('topdate');
+var year=date.getFullYear();
+var month=date.getMonth()+1;
+var day=date.getDate();
+console.log(date);
+console.log(year);
+console.log(month);
+console.log(day);
+topdate.innerHTML=year+'年'+month+'月'+day+'日';
+
+
+
+//section的效果
 function section(){
     var buttons=document.querySelectorAll("#sections li");
-    var content=document.querySelectorAll('.sectiondiv');
+    var content=document.querySelectorAll(".sectiondiv");
     buttons.forEach(function(val, index){
         buttons[index].onclick=function(){
-            for(var j=0;j<buttons.length;j++){
-                buttons[j].className="";
-                content[j].classList.remove("nohiddendiv");
+            for(var i=0;i<buttons.length;i++){
+                buttons[i].className="";
+                content[i].classList.remove("nohiddendiv");
             }
-            buttons[index].className = "nowon";
+            buttons[index].className="nowon";
             content[index].classList.add("nohiddendiv");
         }
     })
 }
+
+
+
+

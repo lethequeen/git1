@@ -3,7 +3,6 @@
 <head>
 	<title>胖胖欢乐购物车</title>
 	<link rel="stylesheet" type="text/css" href="buy.css"/>
-	<script type="text/javascript" src=".js"></script>
 </head>
 <body>
     <div class="body">
@@ -15,7 +14,7 @@
 	      </div>
 	      <div class="top-r">
 	          <input class="sousuo" type="submit" value="搜索">
-	          <input type="text" value="搜索您想要的商品">
+	          <input type="text" placeholder="搜索您想要的商品">
 	      </div>
 	    </div>
 	    <div class="form">
@@ -23,69 +22,121 @@
 	      <table class="tabletop">
 		        <tr>
 		          <td colspan="2">已选商品</td>
-		          <td>数量</td>
-		          <td>价格</td>
-		          <td><input class="jiesuan" type="submit" value="结算"></td>
+		          <td><div class="totalnum">总数:</div><div id="totalnum1">6</div></td>
+		          <td><div class="totalprice">价格:</div><div id="totalprice">$100</div></td>
+		          <td><input class="jiesuan" type="submit" value="确认购买"></td>
 		        </tr>
 	       </table>
-	       <table class="table">
-		        <tr>
-		          <td><img src="images/buy1.png"></td>
-		          <td>分类</td>
-		          <td>数量</td>
-		          <td>价格</td>
-		          <td>移除收藏夹</td>
-		        </tr>
-		   <table class="table">
-		        <tr>
-		          <td><img src="images/buy2.png"></td>
-		          <td>分类</td>
-		          <td>数量</td>
-		          <td>价格</td>
-		          <td>移除收藏夹</td>
-		        </tr>
-		   </table>
-		   <table class="table">
-		        <tr class="tr">
-		          <td><img src="images/buy3.png"></td>
-		          <td>分类</td>
-		          <td>数量</td>
-		          <td>价格</td>
-		          <td>移除收藏夹</td>
-		        </tr>
-		   </table>
-		   <table class="table">
-		        <tr class="tr">
-		          <td><img src="images/buy4.png"></td>
-		          <td>分类</td>
-		          <td>数量</td>
-		          <td>价格</td>
-		          <td>移除收藏夹</td>
-		        </tr>
-		   </table>
-		   <table class="table">
-		        <tr class="tr">
-		          <td><img src="images/buy5.png"></td>
-		          <td>分类</td>
-		          <td>数量</td>
-		          <td>价格</td>
-		          <td>移除收藏夹</td>
-		        </tr>
-	      </table>
-	      <table class="table">
-		        <tr class="tr">
-		          <td><img src="images/buy6.png"></td>
-		          <td>分类</td>
-		          <td>数量</td>
-		          <td>价格</td>
-		          <td>移除收藏夹</td>
-		        </tr>
-	      </table>
+	       <div id="tablecontent">
+		       <table class="table" >
+			        <tr>
+			          <td><img src="images/buy1.png"></td>
+			          <td class="content">万圣节小房子</td>
+			          <td class="number">
+			            <div>数量:</div>
+			            <div class="jian" onload="number()">-</div>
+			            <input type="text" value="1" class="varnum">
+			            <div class="jia" onload="number()">+</div>
+			          </td>
+			          <td >
+			            <div class="price">价格:</div>
+			            <div class="value">$100</div>
+			           </td>
+			          <td><input type="submit" value="删除" class="removething"></td>
+			        </tr>
+			   </table>
+			   <table class="table">
+			        <tr>
+			          <td><img src="images/buy2.png"></td>
+			          <td class="content">万圣节帽子南瓜</td>
+			          <td class="number">
+				        <div>数量:</div>
+				        <div class="jian">-</div>
+				        <input type="text" value="1" class="varnum">
+				        <div class="jia">+</div>
+				      </td>
+			          <td >
+			            <div class="price">价格:</div>
+			            <div class="value">$100</div>
+			           </td>
+			          <td><input type="submit" value="删除" class="removething"></td>
+			        </tr>
+			   </table>
+			   <table class="table">
+			        <tr class="tr">
+			          <td><img src="images/buy3.png"></td>
+			          <td class="content">小章鱼</td>
+			          <td class="number">
+			            <div>数量:</div>
+			            <div class="jian">-</div>
+			            <input type="text" value="1" class="varnum">
+			            <div class="jia">+</div>
+			          </td>
+			          <td >
+			            <div class="price">价格:</div>
+			            <div class="value">$100</div>
+			           </td>
+			          <td><input type="submit" value="删除" class="removething"></td>
+			        </tr>
+			   </table>
+			   <table class="table">
+			        <tr class="tr">
+			          <td><img src="images/buy4.png"></td>
+			          <td class="content">大章鱼</td>
+			          <td class="number">
+			            <div>数量:</div>
+			            <div class="jian">-</div>
+			            <input type="text" value="1" class="varnum">
+			            <div class="jia">+</div>
+			          </td>
+			          <td >
+			            <div class="price">价格:</div>
+			            <div class="value">$100</div>
+			           </td>
+			          <td><input type="submit" value="删除" class="removething"></td>
+			        </tr>
+			   </table>
+			   <table class="table">
+			        <tr class="tr">
+			          <td><img src="images/buy5.png"></td>
+			          <td class="content">小猫咪</td>
+			          <td class="number">
+			            <div>数量:</div>
+			            <div class="jian">-</div>
+			            <input type="text" value="1" class="varnum">
+			            <div class="jia">+</div>
+			          </td>
+			          <td >
+			            <div class="price">价格:</div>
+			            <div class="value">$100</div>
+			           </td>
+			          <td><input type="submit" value="删除" class="removething"></td>
+			        </tr>
+		      </table>
+		      <table class="table">
+			        <tr class="tr">
+			          <td><img src="images/buy6.png"></td>
+			          <td class="content">普通南瓜</td>
+			          <td class="number">
+			            <div>数量:</div>
+			            <div class="jian">-</div>
+			            <input type="text" value="1" class="varnum">
+			            <div class="jia">+</div>
+			          </td>
+			          <td >
+			            <div class="price">价格:</div>
+			            <div class="value">$100</div>
+			           </td>
+			          <td><input class="removething" type="submit" value="删除"></td>
+			        </tr>
+		      </table>
+		    </div>
 	    </div>
 	    <div class="footer">
             <div class="footer1"><p>————你好呀这是温柔善良可爱机智的洋气云瞎写的，如有雷同纯属巧合————</p>
             </div>
         </div>
     </div>
+    <script type="text/javascript" src="buy.js"></script>
 </body>
 </html>
